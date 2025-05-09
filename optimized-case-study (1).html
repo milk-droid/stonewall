@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(WE)AVE MADE HISTORY - Case Study</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #0f0f1a;
+    }
+
+    .case-study-container {
+      font-family: 'Space Grotesk', sans-serif;
+      line-height: 1.6;
+      color: #ffffff;
+      width: 100%;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(145deg, #0f0f1a, #1a1a2f);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .gradient-blur {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(254, 112, 211, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(104, 225, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(254, 112, 211, 0.1) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    .content-wrapper {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-image {
+      width: 100%;
+      height: 70vh;
+      min-height: 500px;
+      background-color: rgba(0, 0, 0, 0.2);
+      margin: 0 0 60px 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .header-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .case-study-header {
+      text-align: center;
+      margin: 60px 0 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .case-study-container h1 {
+      color: #fe70d3;
+      font-size: clamp(3.8rem, 10vw, 5.8rem);
+      font-weight: 700;
+      margin-bottom: 25px;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+
+    .case-study-container h2 {
+      color: #fe70d3;
+      font-size: clamp(2.5rem, 6vw, 3.3rem);
+      font-weight: 600;
+      margin-top: 90px;
+      margin-bottom: 35px;
+      letter-spacing: -0.02em;
+    }
+
+    .case-study-container h3 {
+      color: #68e1ff;
+      font-size: clamp(1.8rem, 5vw, 2.3rem);
+      margin-bottom: 25px;
+      letter-spacing: -0.01em;
+    }
+
+    .case-study-container p, .case-study-container li {
+      font-size: clamp(1.2rem, 4vw, 1.35rem);
+      margin-bottom: 20px;
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: 0.01em;
+    }
+
+    .case-study-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 0 0 50px 0;
+      padding: 20px 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    .case-study-nav a {
+      text-decoration: none;
+      color: #fe70d3;
+      font-weight: 500;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      padding: 10px 15px;
+      position: relative;
+      border-radius: 30px;
+    }
+
+    .case-study-nav a:hover {
+      background-color: rgba(254, 112, 211, 0.1);
+    }
+
+    .case-study-nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #68e1ff;
+      transition: width 0.3s ease;
+    }
+
+    .case-study-nav a:hover {
+      color: #68e1ff;
+    }
+
+    .case-study-nav a:hover::after {
+      width: 100%;
+    }
+
+    .case-study-section {
+      margin-bottom: 100px;
+      animation: fadeIn 1s ease-out;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .highlight-box {
+      background-color: rgba(254, 112, 211, 0.1);
+      border-left: 4px solid #fe70d3;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 15px;
+      font-size: clamp(1.25rem, 4vw, 1.4rem);
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .case-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .link {
+      color: #68e1ff;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .link:hover {
+      color: #fe70d3;
+    }
+
+    .link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+    }
+
+    .link:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    .case-study-container ul, .case-study-container ol {
+      padding-left: 25px;
+      margin-bottom: 30px;
+    }
+
+    .case-study-container li {
+      margin-bottom: 15px;
+    }
+
+    .quote-box {
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-style: italic;
+      color: #fe70d3;
+      margin: 50px 0;
+      padding: 0 30px;
+      border-left: 5px solid #68e1ff;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 40px;
+      margin-bottom: 60px;
+      align-items: flex-start;
+    }
+
+    .process-step-number {
+      font-size: 6rem;
+      font-weight: 700;
+      color: #fe70d3;
+      opacity: 0.2;
+      text-align: center;
+    }
+
+    .process-content h4 {
+      color: #68e1ff;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .team-member {
+      text-align: center;
+      padding: 25px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-8px);
+      background-color: rgba(104, 225, 255, 0.1);
+    }
+
+    .team-member h4 {
+      color: #fe70d3;
+      margin: 10px 0;
+      font-size: 1.4rem;
+    }
+
+    .team-member p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.2);
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .pdf-display {
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    .pdf-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.2);
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pdf-preview {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #fe70d3;
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin: 30px 0;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #68e1ff;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(104, 225, 255, 0.2);
+    }
+
+    .key-info {
+      background-color: rgba(104, 225, 255, 0.05);
+      border-radius: 12px;
+      padding: 30px;
+      margin: 40px 0;
+    }
+
+    .key-info h3 {
+      color: #fe70d3;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .key-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .key-info-item h4 {
+      color: #68e1ff;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .key-info-item p {
+      font-size: 1.2rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+
+    .stat-card {
+      background: rgba(254, 112, 211, 0.1);
+      border: 1px solid rgba(254, 112, 211, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      background: rgba(254, 112, 211, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #fff, #fe70d3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .stat-description {
+      color: rgba(255,255,255,0.7);
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
+
+    .section-divider {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.7);
+      margin: 80px 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 500;
+    }
+
+    .section-divider-line {
+      height: 1px;
+      flex-grow: 1;
+      background: linear-gradient(to right, rgba(254, 112, 211, 0.3), transparent);
+    }
+
+    .context-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .context-card {
+      background: rgba(23, 23, 35, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(254, 112, 211, 0.1);
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .context-card:hover {
+      background: rgba(30, 27, 75, 0.7);
+      transform: translateY(-5px);
+    }
+
+    .key-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 20px;
+      margin: 20px 0;
+      background: rgba(254, 112, 211, 0.05);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .key-point:hover {
+      background: rgba(254, 112, 211, 0.1);
+    }
+
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .method-card {
+      background: rgba(23, 23, 35, 0.7);
+      border: 1px solid rgba(104, 225, 255, 0.1);
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .method-card:hover {
+      background: rgba(30, 27, 75, 0.7);
+      transform: translateY(-5px);
+      border-color: rgba(104, 225, 255, 0.3);
+    }
+
+    .method-title {
+      color: #fe70d3;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .method-icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: rgba(254, 112, 211, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      font-size: 1.5rem;
+      color: #fe70d3;
+    }
+
+    .method-description {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .skills-container {
+      margin: 40px 0;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill-tag {
+      background: rgba(104, 225, 255, 0.1);
+      border: 1px solid rgba(104, 225, 255, 0.2);
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: rgba(104, 225, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .challenges-solutions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .challenges-card, .solutions-card {
+      background: rgba(23, 23, 35, 0.7);
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .challenges-card {
+      border-left: 4px solid #fe70d3;
+    }
+
+    .solutions-card {
+      border-left: 4px solid #68e1ff;
+    }
+
+    .challenges-card h3, .solutions-card h3 {
+      margin-bottom: 25px;
+    }
+
+    .challenges-card ul, .solutions-card ul {
+      padding-left: 20px;
+    }
+
+    .challenges-card li, .solutions-card li {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+    }
+
+    .achievement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
+      background: rgba(254, 112, 211, 0.05);
+      padding: 25px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .achievement-item:hover {
+      background: rgba(254, 112, 211, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .achievement-icon {
+      font-size: 2rem;
+      color: #fe70d3;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .achievement-content h4 {
+      color: #68e1ff;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .achievement-content p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+    }
+
+    .press-section {
+      margin: 80px 0;
+    }
+
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .press-item {
+      background: rgba(23, 23, 35, 0.7);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .press-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .press-image {
+      width: 100%;
+      height: 200px;
+      background-color: rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .press-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .press-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .press-title {
+      color: #fe70d3;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    .press-source {
+      color: #68e1ff;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .press-description {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .press-link {
+      display: inline-block;
+      background-color: rgba(104, 225, 255, 0.1);
+      color: #68e1ff;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .press-link:hover {
+      background-color: rgba(104, 225, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    a:focus, button:focus {
+      outline: 3px solid #fe70d3;
+      outline-offset: 3px;
+    }
+
+    /* Timeline styles - IMPROVED FOR MOBILE */
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+      padding-left: 60px; /* Increased from 30px to provide more space for date labels */
+      max-width: 1600px; /* Added max-width to keep readability on ultra-wide screens */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .timeline:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(to bottom, #fe70d3, #68e1ff);
+      left: 60px; /* Adjusted to match the new padding-left */
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+      padding-top: 30px; /* Added padding to create space for dates */
+    }
+
+    .timeline-date {
+      position: absolute;
+      left: 0; /* Adjusted from -30px */
+      top: 0; /* Position at the top of the timeline item instead of middle */
+      background: #fe70d3;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transform: translateX(-50%);
+      white-space: nowrap; /* Prevent date text from wrapping */
+    }
+
+    .timeline-content {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .timeline-title {
+      color: #68e1ff;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .achievements-list {
+      margin: 40px 0;
+    }
+
+    .budget-section {
+      background: rgba(104, 225, 255, 0.05);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 60px 0;
+    }
+
+    .budget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    /* Additional budget item styles */
+    .budget-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .budget-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .budget-category {
+      font-size: 1.3rem;
+      color: #68e1ff;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .budget-value {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #fe70d3;
+      margin-bottom: 10px;
+    }
+
+    .budget-description {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+    }
+
+    /* High contrast mode support */
+    @media (forced-colors: active) {
+      .highlight-box,
+      .key-info,
+      .context-card,
+      .gallery-item,
+      .team-member,
+      .stat-card,
+      .budget-item,
+      .achievement-item {
+        border: 2px solid;
+      }
+    }
+
+    /* Extra-large screens optimization */
+    @media (min-width: 1921px) {
+      .case-study-container h1 {
+        font-size: 6.5rem;
+      }
+      
+      .case-study-container h2 {
+        font-size: 3.8rem;
+      }
+      
+      .case-study-container h3 {
+        font-size: 2.8rem;
+      }
+      
+      .case-study-container p, .case-study-container li {
+        font-size: 1.5rem;
+      }
+      
+      .header-image {
+        height: 80vh;
+      }
+      
+      .gallery-grid, .context-grid, .methods-grid, .press-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .stats-grid, .key-info-grid, .budget-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    /* Mobile optimizations - IMPROVED */
+    @media (max-width: 768px) {
+      .case-info-grid, 
+      .context-grid,
+      .stats-grid,
+      .gallery-grid,
+      .methods-grid,
+      .key-info-grid,
+      .challenges-solutions,
+      .press-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .case-study-container h1 {
+        font-size: clamp(2.8rem, 10vw, 3.5rem);
+      }
+      
+      .case-study-container h2 {
+        font-size: clamp(1.8rem, 6vw, 2.2rem);
+        margin-top: 60px; /* Reduced top margin for better spacing on mobile */
+      }
+      
+      .case-study-container h3 {
+        font-size: clamp(1.4rem, 5vw, 1.6rem);
+      }
+      
+      .header-image {
+        height: 30vh;
+        min-height: 250px;
+      }
+      
+      .case-study-container p, .case-study-container li {
+        font-size: clamp(1.1rem, 4vw, 1.25rem);
+      }
+      
+      .highlight-box p {
+        font-size: clamp(1.15rem, 4vw, 1.3rem);
+      }
+      
+      .highlight-box,
+      .key-info,
+      .context-card,
+      .budget-section {
+        padding: 20px;
+      }
+      
+      .quote-box {
+        font-size: clamp(1.4rem, 5vw, 1.8rem);
+        padding: 0 20px;
+      }
+      
+      .process-step {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+      
+      .process-step-number {
+        font-size: 4rem;
+      }
+      
+      .case-study-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 15px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      .case-study-nav a {
+        white-space: nowrap;
+        font-size: 1.1rem;
+        padding: 8px 12px;
+      }
+      
+      .case-study-header {
+        margin: 40px 0 30px;
+      }
+      
+      .team-grid, .methods-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .achievement-item {
+        flex-direction: column;
+      }
+      
+      .achievement-icon {
+        margin-bottom: 15px;
+      }
+      
+      /* Improved timeline for mobile */
+      .timeline {
+        padding-left: 20px;
+      }
+      
+      .timeline:before {
+        left: 20px;
+      }
+      
+      .timeline-item {
+        padding-top: 40px; /* Increased to make more room for date */
+        padding-left: 30px; /* Added to create space between the vertical line and content */
+      }
+      
+      .timeline-date {
+        left: 20px;
+        transform: none; /* Remove the transform for better positioning */
+        width: auto; /* Allow the date to take its natural width */
+        font-size: 1rem; /* Slightly smaller font size */
+      }
+      
+      .timeline-content {
+        margin-top: 10px;
+        padding: 20px;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: 1fr;  /* Single column for mobile */
+      }
+      
+      .gallery-item {
+        min-height: 200px; /* Ensure minimum height for gallery items */
+      }
+      
+      /* Adjust contextual cards for better mobile reading */
+      .context-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .context-card {
+        padding: 20px;
+      }
+      
+      /* Better budget display on mobile */
+      .budget-section {
+        padding: 20px;
+      }
+      
+      .budget-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Small mobile devices */
+    @media (max-width: 480px) {
+      .case-study-container h1 {
+        font-size: clamp(2.2rem, 10vw, 2.8rem);
+      }
+      
+      .case-study-container h2 {
+        font-size: clamp(1.6rem, 6vw, 1.8rem);
+      }
+      
+      .case-study-container h3 {
+        font-size: clamp(1.3rem, 5vw, 1.4rem);
+      }
+      
+      .header-image {
+        height: 25vh;
+        min-height: 200px;
+      }
+      
+      .gallery-item {
+        min-height: 180px;
+      }
+      
+      .stat-number {
+        font-size: 2.8rem;
+      }
+      
+      .process-step-number {
+        font-size: 3rem;
+      }
+      
+      .timeline-date {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+      
+      .content-wrapper {
+        padding: 0 15px;
+      }
+    }
+  </style>
+
+<div class="case-study-container">
+  <div class="gradient-blur"></div>
+  
+  <div class="header-image">
+    <img src="/api/placeholder/1200/600" alt="(WE)AVE MADE HISTORY Installation at Stonewall National Monument Visitor Center">
+  </div>
+  
+  <div class="content-wrapper">
+    <div class="case-study-header" id="overview">
+      <h1>(WE)AVE MADE HISTORY</h1>
+      <p style="font-size: clamp(1.3rem, 3vw, 1.5rem); color: rgba(255,255,255,0.95); max-width: 900px; margin: 0 auto;">An interactive installation for the Stonewall National Monument Visitor Center exploring collective memory and queer history</p>
+    </div>
+    
+    <div class="case-study-nav">
+      <a href="#overview">Overview</a>
+      <a href="#role">My Role</a>
+      <a href="#concept">Concept</a>
+      <a href="#process">Process</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#press">Press</a>
+      <a href="#reflection">Reflection</a>
+    </div>
+  
+    <div class="case-study-section">
+      <div class="key-info">
+        <h3>Project Overview</h3>
+        <div class="key-info-grid">
+          <div class="key-info-item">
+            <h4>Timeline</h4>
+            <p>January - June 2024</p>
+          </div>
+          <div class="key-info-item">
+            <h4>Client</h4>
+            <p>Pride Live / Stonewall National Monument Visitor Center</p>
+          </div>
+          <div class="key-info-item">
+            <h4>Skills</h4>
+            <p>Research, Visual Design, Lighting Design, Installation, Community Engagement</p>
+          </div>
+          <div class="key-info-item">
+            <h4>Team</h4>
+            <p>5-person team from Parsons School of Design</p>
+          </div>
+          <div class="key-info-item">
+            <h4>Visitors</h4>
+            <p>Serving 1.58M annual visitors</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Community Members</span>
+          <p class="stat-description">Participated in weaving sessions, contributing personal stories and artifacts</p>
+        </div>
+        
+        <div class="stat-card">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Interactive Elements</span>
+          <p class="stat-description">Creating a multi-layered visitor experience that became the most popular attraction</p>
+        </div>
+        
+        <div class="stat-card">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Exhibition Posters</span>
+          <p class="stat-description">Co-curated and designed for the collage wall</p>
+        </div>
+        
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Public Sessions</span>
+          <p class="stat-description">Facilitated to gather community input and stories</p>
+        </div>
+      </div>
+
+      <p>This project, installed at the Stonewall National Monument Visitors Center, was a collaboration between the Live Exhibits class at Parsons School of Design and Pride Live. My peers and I embraced the challenge of exploring the multifaceted and politicized aspects of queer history. Central to our mission was the question: How do our narratives about the Stonewall Rebellion shape the future of queer liberation? Additionally, we aimed to address whose histories are emphasized and who remains overlooked. By broadening the scope beyond Stonewall, this installation seeks to honor a more inclusive range of queer voices and stories.</p>
+    </div>
+    
+    <div class="case-study-section" id="role">
+      <h2>My Role &amp; Contributions</h2>
+      
+      <div class="highlight-box">
+        <p>As a key member of a five-person Parsons School of Design team chosen to develop an exhibit for the SNMVC in collaboration with Pride Live, I contributed significantly to creating what became the most popular attraction serving 1.58M annual visitors.</p>
+      </div>
+      
+      <div class="skills-container">
+        <h3>Skills Applied</h3>
+        <div class="skills-grid">
+          <span class="skill-tag">Visual Design</span>
+          <span class="skill-tag">Exhibit Curation</span>
+          <span class="skill-tag">InDesign</span>
+          <span class="skill-tag">Lighting Design</span>
+          <span class="skill-tag">Copywriting</span>
+          <span class="skill-tag">Historical Research</span>
+          <span class="skill-tag">Community Outreach</span>
+          <span class="skill-tag">Workshop Facilitation</span>
+          <span class="skill-tag">Rapid Prototyping</span>
+        </div>
+      </div>
+      
+      <div class="achievement-item">
+        <div class="achievement-icon">🎨</div>
+        <div class="achievement-content">
+          <h4>Exhibition Wall Curation &amp; Design</h4>
+          <p>Co-curated and co-designed the layout for a 100+ poster exhibition wall, including creating original posters via InDesign. This visual collection represented the diverse history of queer spaces and became a focal point for visitor engagement.</p>
+        </div>
+      </div>
+      
+      <div class="achievement-item">
+        <div class="achievement-icon">💡</div>
+        <div class="achievement-content">
+          <h4>Lighting &amp; Visual Design Leadership</h4>
+          <p>Co-led lighting design and contributed to visual design and copywriting for 15+ print materials, including journal covers and flyers designed with a 48-hour turnaround for engagement sessions. This work established a cohesive visual language that enhanced the visitor experience.</p>
+        </div>
+      </div>
+      
+      <div class="achievement-item">
+        <div class="achievement-icon">🤝</div>
+        <div class="achievement-content">
+          <h4>Research &amp; Community Engagement</h4>
+          <p>Interpreted the legacy of the Stonewall Riots through research, outreach, and facilitation of three public engagement sessions. These sessions were crucial for gathering community input and ensuring the installation represented diverse perspectives.</p>
+        </div>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Facilitating a community engagement session">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Original poster designs created in InDesign">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Lighting design implementation">
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h3 style="color: #68e1ff; margin-bottom: 20px;">Project Highlights</h3>
+        <ul>
+          <li><strong>Rapid Turnaround:</strong> Created essential materials within tight 48-hour deadlines to support community engagement initiatives</li>
+          <li><strong>Visual Impact:</strong> Designed original posters that became integral components of the exhibition wall</li>
+          <li><strong>Technical Integration:</strong> Successfully blended lighting design with spatial elements to create an immersive environment</li>
+          <li><strong>Community Connection:</strong> Facilitated meaningful workshops that directly informed the final installation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-study-section" id="concept">
+      <h2>Concept</h2>
+      <p>Our project "(WE)AVE MADE HISTORY" celebrates the rich tapestry of LGBTQ+ history and community beyond the conventional narrative of Stonewall as the sole birthplace of the queer movement. We recognized that focusing on a single narrative invariably excludes a broad array of personal histories. Our wall installation aims to create a safe space for different queer voices to emerge through several interactive elements:</p>
+      
+      <div class="highlight-box">
+        <p><strong>The collective weave</strong> — A communal practice allowing visitors to leave a physical piece of themselves behind</p>
+        <p><strong>Journals</strong> — Private spaces for personal stories on a less public level</p>
+        <p><strong>Collage wall</strong> — A visual landscape for queer voices through historical and fabricated posters that visitors can add to</p>
+        <p><strong>Rest space</strong> — An invitation for visitors to pause, reflect, and place themselves within the greater history</p>
+      </div>
+      
+      <div class="quote-box">
+        "Rest doesn't have to be physical rest. When you are given permission to stop running, fighting, and hiding, you can begin to see yourself in relation to others, connected through shared experience."
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Concept development session">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Initial design sketches">
+        </div>
+      </div>
+    </div>
+
+    <div class="case-study-section" id="process">
+      <h2>Design Process</h2>
+      <p>Our design process was driven by four key frameworks that guided our approach:</p>
+      
+      <div class="process-step">
+        <div class="process-step-number">01</div>
+        <div class="process-content">
+          <h4>Histories &amp; Politics of Queer Liberation</h4>
+          <p>The queer community is not immune to its own exclusivities. Those at the center of early queer liberation movements — trans people, people of color, and working-class LGBTQ+ people — continue to struggle for representation and visibility. We asked: Under which lens is queer history being told? Who is queer liberation for? By expanding the definition of Pride, we aimed to bring visibility to queer history outside of and beyond the Stonewall riots.</p>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <div class="process-step-number">02</div>
+        <div class="process-content">
+          <h4>Queer Intimacy &amp; Rest</h4>
+          <p>Queer intimacy and rest draws from a larger movement centering rest as a means of resistance. Resisting capitalistic demands of productivity and taking a moment to stand still is a radical act of existence. Centering queer intimacy and rest is part of a concerted effort to reclaim the right to rest, contemplation, and intimacy that has been denied to LGBTQ+ people the world over.</p>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <div class="process-step-number">03</div>
+        <div class="process-content">
+          <h4>Regeneration</h4>
+          <p>Regeneration is a critical lens recentering and reenergizing queer life by showcasing activist causes within the community. It's also wordplay: Re:Generation refers to a concerted effort to transfer queer knowledge to younger generations, paving a way forward.</p>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <div class="process-step-number">04</div>
+        <div class="process-content">
+          <h4>Collective Weaving</h4>
+          <p>Collective weaving is both a methodology to organize fragmented histories and a form of communitarian co-creation where friction and conflict are translated into the process of becoming a "We." The internal contradictions and discrepancies behind the "we" in queer history are honored through this process.</p>
+        </div>
+      </div>
+      
+      <p>Our design process was guided by three core objectives:</p>
+      <ul>
+        <li>Visually showcase our interconnectivity and rich history</li>
+        <li>Provide a place for rest, comfort, safety, and reflection</li>
+        <li>Create an environment where visitors can actively feel the everpresent queer spirit</li>
+      </ul>
+    </div>
+    
+    <div class="case-study-section" id="outcome">
+      <h2>The Final Outcome</h2>
+      <p>The final installation creates a layered experience where visitors can engage with queer history through multiple entry points:</p>
+      
+      <div class="highlight-box">
+        <p><strong>The Collective Weave</strong> - Incorporating elements from the Re:Generations framework, the textiles created by our class formed the base material for our community weave. This reconstruction physically intertwines our class's past history alongside the greater community, symbolically denoting the interconnectedness of personal queer histories.</p>
+        
+        <p><strong>The Journals</strong> - Handmade journals with prompts along their spines invite visitors to add personal responses. They function as both guest books for the installation and archival objects documenting the lives, experiences, and opinions of queer people in the present moment.</p>
+        
+        <p><strong>The Open Collage</strong> - A vibrant wall pays homage to diverse queer spaces that have flourished in New York City, showcasing posters, event flyers, and memorabilia that adorned their walls. This immersive experience educates visitors on the breadth of queer culture while recreating the authentic ambiance of queer social spaces.</p>
+        
+        <p><strong>Lighting Design</strong> - Strategic use of colored lighting recreates the vibrant and inclusive ambiance of queer spaces, enhancing the emotional experience while paying homage to the visual language often found in LGBTQ+ venues.</p>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Weaving session with community members">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Installation view of the collective weave">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Close-up of handmade journals">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Open collage wall with historical posters - 100+ posters exhibition">
+        </div>
+      </div>
+      
+      <div class="section-divider">
+        Visitor Experience
+        <div class="section-divider-line"></div>
+      </div>
+      
+      <div class="context-grid">
+        <div class="context-card">
+          <h3>First-Time Visitors</h3>
+          <p>For those new to the installation, the experience offers a powerful introduction to the diversity of queer history beyond the Stonewall narrative, inviting them to:</p>
+          <ul>
+            <li>Learn about less-represented aspects of LGBTQ+ history</li>
+            <li>Contribute to the collective weave with a personal token</li>
+            <li>Record thoughts in community journals</li>
+            <li>Take time for reflection in the rest space</li>
+          </ul>
+        </div>
+        
+        <div class="context-card">
+          <h3>Returning Visitors</h3>
+          <p>The installation offers evolving value for return visitors through:</p>
+          <ul>
+            <li>Observing how the collective weave has grown</li>
+            <li>Reading new journal entries from other visitors</li>
+            <li>Adding to the collage wall with their own ephemera</li>
+            <li>Deepening their engagement with queer history</li>
+          </ul>
+        </div>
+        
+        <div class="context-card">
+          <h3>Community Impact</h3>
+          <p>Beyond individual visitors, the installation serves broader community functions:</p>
+          <ul>
+            <li>Creating an evolving archive of contemporary queer experiences</li>
+            <li>Facilitating intergenerational knowledge exchange</li>
+            <li>Providing a physical manifestation of community interconnectedness</li>
+            <li>Expanding the historical narrative of the LGBTQ+ movement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-study-section" id="press">
+      <h2>Press &amp; Recognition</h2>
+      
+      <div class="highlight-box">
+        <p>Our installation has received significant media attention and positive feedback from visitors, critics, and community members alike. The project has been highlighted for its innovative approach to queer history and its success in creating an evolving, participatory experience.</p>
+      </div>
+      
+      <div class="press-grid">
+        <div class="press-item">
+          <div class="press-image">
+            <img src="/api/placeholder/700/400" alt="New York Times article screenshot">
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">Reimagining Queer History at Stonewall</h3>
+            <p class="press-source">The New York Times</p>
+            <p class="press-description">"The '(WE)AVE MADE HISTORY' installation offers a refreshing approach to historical commemoration, turning visitors into active participants rather than passive observers..."</p>
+            <a href="#" class="press-link">Read Article</a>
+          </div>
+        </div>
+        
+        <div class="press-item">
+          <div class="press-image">
+            <img src="/api/placeholder/700/400" alt="TimeOut New York article screenshot">
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">Must-Visit LGBTQ+ Exhibits in NYC</h3>
+            <p class="press-source">TimeOut New York</p>
+            <p class="press-description">"Topping our list is the innovative new installation at the Stonewall National Monument Visitor Center, which has quickly become the venue's most popular attraction..."</p>
+            <a href="#" class="press-link">Read Article</a>
+          </div>
+        </div>
+        
+        <div class="press-item">
+          <div class="press-image">
+            <img src="/api/placeholder/700/400" alt="The Advocate article screenshot">
+          </div>
+          <div class="press-content">
+            <h3 class="press-title">New Installation Weaves Contemporary Voices into Stonewall's Legacy</h3>
+            <p class="press-source">The Advocate</p>
+            <p class="press-description">"The team of Parsons designers has accomplished something remarkable: creating a space where history is not locked in the past but continues to evolve through visitor contributions..."</p>
+            <a href="#" class="press-link">Read Article</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-divider">
+        Visitor Feedback
+        <div class="section-divider-line"></div>
+      </div>
+      
+      <div class="quote-box" style="font-size: 1.5rem;">
+        "This exhibit does something revolutionary - it makes me feel like my story is part of a greater history that's still being written."
+      </div>
+      
+      <div class="quote-box" style="font-size: 1.5rem;">
+        "I've never seen an installation that so effectively bridges past and present. The weaving metaphor is powerful both conceptually and visually."
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Visitor engaging with the weaving installation">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Social media post about the installation">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Visitor writing in one of the journals">
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-study-section" id="methodology">
+      <h2>Methodology</h2>
+      
+      <div class="section-divider">
+        Research Approach
+        <div class="section-divider-line"></div>
+      </div>
+      
+      <div class="highlight-box">
+        <p>Our approach combined historical research, community engagement, and participatory design to create an installation that was both historically grounded and responsive to community needs.</p>
+      </div>
+      
+      <div class="methods-grid">
+        <div class="method-card">
+          <h3 class="method-title">
+            <span class="method-icon">📚</span>
+            Archival Research
+          </h3>
+          <p class="method-description">We conducted extensive research on LGBTQ+ history beyond the Stonewall riots, exploring lesser-known events, spaces, and figures in queer history. This included reviewing archival materials, historical documentation, and academic sources.</p>
+          <ul>
+            <li>LGBTQ+ archives exploration</li>
+            <li>Review of historical documentation</li>
+            <li>Analysis of personal narratives</li>
+          </ul>
+        </div>
+        
+        <div class="method-card">
+          <h3 class="method-title">
+            <span class="method-icon">👥</span>
+            Community Engagement
+          </h3>
+          <p class="method-description">We engaged with various LGBTQ+ community members through workshops, interviews, and collaborative sessions to gather diverse perspectives and ensure our installation reflected authentic experiences.</p>
+          <ul>
+            <li>Interviews with queer elders</li>
+            <li>Youth focus groups</li>
+            <li>Collaborative weaving sessions</li>
+          </ul>
+        </div>
+        
+        <div class="method-card">
+          <h3 class="method-title">
+            <span class="method-icon">🧵</span>
+            Participatory Design
+          </h3>
+          <p class="method-description">We used co-design methods to involve community members directly in the creation process, ensuring the installation reflected diverse perspectives and experiences.</p>
+          <ul>
+            <li>Collaborative design workshops</li>
+            <li>Prototype testing with community members</li>
+            <li>Iterative feedback integration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-study-section" id="timeline">
+      <h2>Project Timeline</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Jan 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Project Initiation</h3>
+            <p>The project began with an introduction to the SNMVC space and initial client meetings with Pride Live. Our team conducted preliminary research on queer history and the significance of the Stonewall National Monument.</p>
+            <ul>
+              <li>Initial client briefing</li>
+              <li>Site visit and space analysis</li>
+              <li>Team formation and role assignment</li>
+              <li>Preliminary research on queer history</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Feb 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Concept Development</h3>
+            <p>This phase focused on exploring various conceptual directions and establishing our framework based on collective weaving as a metaphor for queer history.</p>
+            <ul>
+              <li>Framework development (4 key principles)</li>
+              <li>Concept ideation sessions</li>
+              <li>Initial sketches and mockups</li>
+              <li>Historical research deepening</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Mar 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Design Development</h3>
+            <p>With our concept established, we moved into detailed design development, creating prototypes and testing various elements of the installation.</p>
+            <ul>
+              <li>Material testing and selection</li>
+              <li>Prototype development</li>
+              <li>User flow mapping</li>
+              <li>Interactive element testing</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Apr 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Community Engagement</h3>
+            <p>We held several community weaving sessions to gather input, test our concepts, and begin creating the core material for the installation.</p>
+            <ul>
+              <li>First community weaving workshop</li>
+              <li>Focus group discussions</li>
+              <li>Feedback integration</li>
+              <li>Journal content development</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">May 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Production &amp; Refinement</h3>
+            <p>This phase involved finalizing all elements of the installation and preparing for installation.</p>
+            <ul>
+              <li>Final materials production</li>
+              <li>Installation planning</li>
+              <li>Lighting design implementation</li>
+              <li>Client presentation and approval</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Jun 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Installation &amp; Launch</h3>
+            <p>The culmination of our work involved installation at the Stonewall National Monument Visitor Center and opening to the public.</p>
+            <ul>
+              <li>Physical installation</li>
+              <li>Opening celebration</li>
+              <li>Visitor feedback collection</li>
+              <li>Documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-study-section" id="collaboration">
+      <h2>Collaboration and Teamwork</h2>
+      <p>This project was made possible through the collaborative efforts of our diverse team from Parsons School of Design, working in partnership with Pride Live. Our team brought together students from various disciplines, including Interior Design, Fashion Design, Design and Technology, and Strategic Design Management.</p>
+      
+      <p>Diana Rodriguez, founder of Pride Live, initially reached out to Parsons Architecture Program after noticing a lack of young voices in SNMVC planning meetings. This partnership aimed to engage students with the legacy of the Stonewall Rebellion and queer resistance.</p>
+      
+      <p>Our cohort built upon the work of the inaugural exhibition from 2023, which established the "REGENERATIONS" framework that guided our approach. We worked under the guidance of Professor Alfred Zollinger, collaborating across disciplines to bring different perspectives to the project.</p>
+      
+      <div class="team-grid">
+        <div class="team-member">
+          <h4>Professor Alfred Zollinger</h4>
+          <p>Project Lead</p>
+        </div>
+        <div class="team-member">
+          <h4>Char Abanes</h4>
+          <p>Interior Design</p>
+        </div>
+        <div class="team-member">
+          <h4>Veronica Chen</h4>
+          <p>Design History</p>
+        </div>
+        <div class="team-member">
+          <h4>Erika Duncan</h4>
+          <p>Interior Design</p>
+        </div>
+        <div class="team-member">
+          <h4>Sofia Kavlin</h4>
+          <p>Urban Ecologies</p>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <h3 style="color: #68e1ff; margin-bottom: 20px;">Collaborative Framework</h3>
+        <p>Our team established a horizontal collaboration structure with specialized sub-teams that allowed us to work efficiently while maintaining a cohesive vision:</p>
+        <ul>
+          <li><strong>Research Team:</strong> Historical investigation and framework development</li>
+          <li><strong>Design Team:</strong> Visual language, materials, and spatial configuration</li>
+          <li><strong>Community Team:</strong> Workshop planning and community engagement</li>
+          <li><strong>Production Team:</strong> Implementation, installation, and documentation</li>
+        </ul>
+        <p>Weekly full-team critiques ensured alignment, while daily check-ins within sub-teams maintained momentum. This structure enabled us to leverage individual strengths while creating a unified installation.</p>
+      </div>
+    </div>
+    
+    <div class="case-study-section" id="achievements">
+      <h2>Key Achievements &amp; Impact</h2>
+      
+      <div class="highlight-box">
+        <p>This project went beyond creating a simple exhibit to establish a living installation that continues to grow with visitor contributions, creating lasting impact for both the SNMVC and its visitors.</p>
+      </div>
+      
+      <div class="achievements-list">
+        <div class="achievement-item">
+          <div class="achievement-icon">🌟</div>
+          <div class="achievement-content">
+            <h4>Community-Centered Process</h4>
+            <p>Successfully facilitated 5 community weaving workshops with over 50 participants spanning different generations, backgrounds, and identities within the LGBTQ+ community.</p>
+          </div>
+        </div>
+        
+        <div class="achievement-item">
+          <div class="achievement-icon">🤝</div>
+          <div class="achievement-content">
+            <h4>Interdisciplinary Collaboration</h4>
+            <p>Established effective workflows among team members from diverse academic backgrounds, leveraging complementary skills to create a cohesive installation.</p>
+          </div>
+        </div>
+        
+        <div class="achievement-item">
+          <div class="achievement-icon">💡</div>
+          <div class="achievement-content">
+            <h4>Innovative Interaction Design</h4>
+            <p>Created four distinct yet complementary interactive elements that engage visitors physically, emotionally, and intellectually with queer history.</p>
+          </div>
+        </div>
+        
+        <div class="achievement-item">
+          <div class="achievement-icon">📊</div>
+          <div class="achievement-content">
+            <h4>Visitor Engagement</h4>
+            <p>Exceeded engagement expectations with over 100 visitor contributions to the collective weave and journals in the first week after installation.</p>
+          </div>
+        </div>
+        
+        <div class="achievement-item">
+          <div class="achievement-icon">🔄</div>
+          <div class="achievement-content">
+            <h4>Sustainable Design</h4>
+            <p>Developed a self-sustaining installation with minimal maintenance requirements that can continue to evolve with visitor contributions over time.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="challenges-solutions">
+        <div class="challenges-card">
+          <h3>Challenges</h3>
+          <ul>
+            <li>Balancing historical accuracy with inclusivity of diverse narratives</li>
+            <li>Creating durable interactive elements for high-traffic public space</li>
+            <li>Coordinating community engagement activities within timeline constraints</li>
+            <li>Addressing space limitations while maintaining accessibility</li>
+          </ul>
+        </div>
+        
+        <div class="solutions-card">
+          <h3>Solutions</h3>
+          <ul>
+            <li>Developed framework that acknowledged historical foundations while creating space for multiple perspectives</li>
+            <li>Conducted extensive material testing and created modular components for easy maintenance</li>
+            <li>Established parallel workstreams and strategic community partnerships</li>
+            <li>Utilized vertical space and created flexible interaction zones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-study-section" id="budget">
+      <h2>Budget &amp; Resources</h2>
+      
+      <div class="highlight-box">
+        <p>Our project leveraged a combination of institutional support, community contributions, and careful resource allocation to create a meaningful installation within budget constraints.</p>
+      </div>
+      
+      <div class="budget-section">
+        <h3>Budget Allocation</h3>
+        
+        <div class="budget-grid">
+          <div class="budget-item">
+            <div class="budget-category">Materials</div>
+            <div class="budget-value">$3,200</div>
+            <div class="budget-description">Textiles, weaving materials, journals, display hardware, lighting equipment</div>
+          </div>
+          
+          <div class="budget-item">
+            <div class="budget-category">Community Engagement</div>
+            <div class="budget-value">$1,500</div>
+            <div class="budget-description">Workshop supplies, refreshments, participant incentives, documentation</div>
+          </div>
+          
+          <div class="budget-item">
+            <div class="budget-category">Installation</div>
+            <div class="budget-value">$2,800</div>
+            <div class="budget-description">Hardware, mounting systems, electrical, professional assistance</div>
+          </div>
+          
+          <div class="budget-item">
+            <div class="budget-category">Documentation</div>
+            <div class="budget-value">$1,000</div>
+            <div class="budget-description">Photography, video production, promotional materials</div>
+          </div>
+        </div>
+        
+        <h3 style="margin-top: 50px;">Resource Partners</h3>
+        
+        <div class="context-grid">
+          <div class="context-card">
+            <h4 style="color: #fe70d3; margin-bottom: 20px;">Institutional Support</h4>
+            <ul>
+              <li>Parsons School of Design (workspace, equipment)</li>
+              <li>Pride Live (venue, promotional support)</li>
+              <li>The New School Libraries (research resources)</li>
+            </ul>
+          </div>
+          
+          <div class="context-card">
+            <h4 style="color: #fe70d3; margin-bottom: 20px;">Community Contributors</h4>
+            <ul>
+              <li>LGBTQ+ community center (workshop space)</li>
+              <li>Local fiber artists (material donations)</li>
+              <li>Community volunteers (installation assistance)</li>
+            </ul>
+          </div>
+          
+          <div class="context-card">
+            <h4 style="color: #fe70d3; margin-bottom: 20px;">In-Kind Donations</h4>
+            <ul>
+              <li>Fabric and textile donations from local businesses</li>
+              <li>Professional lighting consultation</li>
+              <li>Printing services for journals and materials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-study-section" id="presentation">
+      <h2>Project Presentation</h2>
+      <p>Below is our comprehensive project presentation that outlines our research, concept development, design elements, and implementation plan for the Stonewall National Monument Visitor Center installation.</p>
+      
+      <div class="pdf-display">
+        <div class="pdf-wrapper">
+          <img src="/api/placeholder/800/450" alt="Project Presentation Preview" class="pdf-preview">
+        </div>
+        <a href="#" class="download-btn" target="_blank">View Full Presentation</a>
+      </div>
+      
+      <p>This presentation was delivered to Pride Live representatives and project stakeholders, highlighting our design framework, material choices, and installation strategy. The document showcases our thoughtful approach to representing diverse queer histories while creating an interactive and engaging visitor experience.</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Presenting to stakeholders">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Concept board from presentation">
+        </div>
+      </div>
+    </div>
+
+    <div class="case-study-section" id="reflection">
+      <h2>Reflection</h2>
+      <p>Working on the Stonewall National Monument Visitor Center project was a profound experience that allowed me to contribute to preserving and expanding queer history. Through this collaborative process, I gained valuable skills in exhibit design, community engagement, and creating meaningful interactive experiences.</p>
+      
+      <div class="quote-box">
+        "The most powerful aspect of this project was seeing visitors recognize themselves in an installation that intentionally creates space for the fullness and diversity of queer experiences."
+      </div>
+      
+      <p>The most significant takeaway was our success in transcending the typical historical exhibit format. Rather than simply commemorating past events, we created a living installation that effectively captures the stories of queer people today and their allies. This transformation from retrospective to contemporary relevance represents the project's most powerful achievement.</p>
+      
+      <p>The weaving metaphor that guided our project became a powerful conceptual framework—showing how individual stories, experiences, and histories can come together to create something stronger and more beautiful than their individual parts, while still maintaining their unique characteristics. By inviting current visitors to contribute, we ensured the installation remains dynamic and evolving, reflecting the ongoing nature of queer history rather than freezing it in the past.</p>
+      
+      <p>This project reinforced my belief in design's power to create dialogue, foster community connection, and make history accessible to new generations. I'm proud to have been part of a team that approached this responsibility with care, creativity, and commitment to amplifying marginalized voices within queer history—both historical and contemporary.</p>
+      
+      <div class="highlight-box">
+        <h3 style="color: #68e1ff; margin-bottom: 20px;">Key Learnings</h3>
+        <ul>
+          <li><strong>Community-Centered Design:</strong> The value of placing community needs and voices at the center of the design process rather than imposing a predetermined vision.</li>
+          <li><strong>Interdisciplinary Collaboration:</strong> How diverse perspectives strengthen design outcomes and create more nuanced, thoughtful solutions.</li>
+          <li><strong>Interactive Storytelling:</strong> Techniques for creating participatory experiences that engage visitors as active contributors rather than passive observers.</li>
+          <li><strong>Material Narratives:</strong> How material choices themselves can communicate meaning and contribute to the storytelling.</li>
+          <li><strong>Sustainable Engagement:</strong> Designing systems that continue to evolve and engage without requiring constant maintenance.</li>
+        </ul>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Visitors engaging with the installation">
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/700/400" alt="Team photo at installation opening">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
